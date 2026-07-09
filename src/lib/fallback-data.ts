@@ -1,4 +1,4 @@
-import type { LandingPageData, ServiceIcon } from "@/lib/types/landing";
+import type { LandingPageData } from "@/lib/types/landing";
 
 export const FALLBACK_LANDING_DATA: LandingPageData = {
   source: "fallback",
@@ -72,16 +72,16 @@ export const FALLBACK_LANDING_DATA: LandingPageData = {
   },
 };
 
-const VALID_ICONS: ServiceIcon[] = [
+const VALID_ICONS: string[] = [
   "Compass",
   "FileText",
   "HeartPulse",
   "Stethoscope",
 ];
 
-export function parseServiceIcon(value: string | null | undefined): ServiceIcon {
-  if (value && VALID_ICONS.includes(value as ServiceIcon)) {
-    return value as ServiceIcon;
+export function parseServiceIcon(value: string | null | undefined): string {
+  if (value && VALID_ICONS.includes(value)) {
+    return value;
   }
   return "Compass";
 }
