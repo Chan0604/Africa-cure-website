@@ -233,7 +233,7 @@ export default function HeroSection({
 
       {/* ── Floating Cards ── */}
       <div className="relative z-10 mx-auto mt-16 grid w-full max-w-4xl grid-cols-1 gap-5 sm:grid-cols-2 sm:mt-20">
-        {floatingCards.map((card, index) => (
+        {floatingCards.map((card: { title: string; icon: string; description: string }, index: number) => (
           <FloatingGlassCard
             key={`${card.title}-${index}`}
             icon={getServiceIcon(card.icon)}
