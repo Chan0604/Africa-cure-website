@@ -87,7 +87,7 @@ export default function StatsSection({ eyebrow, title, titleHighlight, items }: 
 
         {/* Stats grid */}
         <div className="grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-4">
-          {items.map((stat, index) => (
+          {items.map((stat: any, index: number) => (
             <StatItem
               key={`${stat.label}-${index}`}
               value={stat.value}
