@@ -1,4 +1,9 @@
-import { fetchGraphQL, GraphQLClientError, isGraphQLConfigured } from "@/lib/graphql";
+import { FALLBACK_LANDING_DATA } from "@/lib/fallback-data";
+
+export async function getLandingPageData() {
+  // On retourne directement les données locales, plus besoin de WordPress
+  return FALLBACK_LANDING_DATA;
+}
 import {
   FALLBACK_LANDING_DATA,
   parseServiceIcon,
