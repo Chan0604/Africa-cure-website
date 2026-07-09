@@ -77,7 +77,7 @@ export default function ServicesSection({
           </motion.div>
 
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {medicalServices.map((service, index) => (
+            {medicalServices.map((service: any, index: number) => (
               <ServiceCard
                 key={`medical-${index}`}
                 icon={service.icon}
@@ -114,7 +114,7 @@ export default function ServicesSection({
           </motion.div>
 
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {techServices.map((service, index) => (
+            {techServices.map((service: any, index: number) => (
               <ServiceCard
                 key={`tech-${index}`}
                 icon={service.icon}
